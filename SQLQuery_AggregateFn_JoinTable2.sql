@@ -42,6 +42,7 @@ from orders o join [Order Details] od on o.OrderID = od.OrderID
 			  join Employees e on e.EmployeeID = o.EmployeeID
 where firstname = 'Nancy' and year(OrderDate)  = 1998
 ---------------------------------------------------------------------
+GO
 declare @id as int
 set @id = 10280
 -- จงแสดงรหัสใบสั่งซื้อ วันที่ออกใบสั่งซื้อ วันที่รับสินค้า ชื่อบริษัทขนส่ง ชื่อเต็มพนักงาน ชื่อบริษัทลูกค้า เบอร์โทรลูกค้า
@@ -62,7 +63,7 @@ Create or Alter view OrderList as
 go
 
 select * from OrderList where orderID = 10252
-
+go
 -- จงแสดง รหัสสินค้า ชื่อสินค้า จำนวนที่ขายได้ ราคาที่ขาย ส่วนลด(%), ยอดเงินเต็ม, ยอดเงินส่วนลด, ยอดเงินที่หักส่วนลด
 -- ในแต่ละรายการในใบเสร็จเลขที่  10801
 
